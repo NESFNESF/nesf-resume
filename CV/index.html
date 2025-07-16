@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV interactif – Fabrice Serge NGANE EBOUTOU, Développeur Fullstack</title>
+  <meta name="description" content="Explorez le CV interactif de Fabrice Serge NGANE EBOUTOU sous forme de terminal. Tapez des commandes pour découvrir ses compétences, expériences et formations." />
+  <meta name="keywords" content="CV développeur, Fabrice Serge NGANE EBOUTOU, développeur fullstack, terminal, portfolio interactif, développeur web, développeur mobile, data science" />
+  <meta name="author" content="Fabrice Serge NGANE EBOUTOU" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <main class="terminal" role="main" aria-label="CV interactif sous forme de terminal">
+    <section class="output" id="output" aria-live="polite">
+Bienvenue sur le <strong>CV interactif</strong> de <strong>Fabrice Serge NGANE EBOUTOU</strong>.<br><br>
+
+📧 <strong>Email :</strong> nganefabrice693@gmail.com<br>
+📞 <strong>Téléphone :</strong> +237 693 072 361<br>
+📍 <strong>Localisation :</strong> Yaoundé, Cameroun<br>
+🌍 <strong>Nationalité :</strong> Camerounais<br>
+🚗 <strong>Permis de conduire :</strong> Permis B<br>
+🔗 <strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/ngane-eboutou-serge-fabrice" target="_blank" rel="noopener noreferrer" style="color:#33ff33;">https://www.linkedin.com/in/ngane-eboutou-serge-fabrice</a><br><br>
+
+Tapez <code>help</code> pour découvrir les commandes disponibles et explorer mes compétences, expériences professionnelles, formations, etc.<br>
+Vous pouvez également taper <code>contact</code> pour revoir mes informations de contact.
+    </section>
+
+    <section class="input-line" aria-label="Zone de saisie de commande terminal">
+      <span aria-hidden="true">&gt;</span>
+      <input type="text" id="input" aria-label="Champ de saisie de commande" autofocus autocomplete="off" />
+    </section>
+  </main>
+
+  <noscript>
+    <p style="color: white; background: black; padding: 1rem;">
+      ⚠️ Ce site nécessite JavaScript pour fonctionner. Activez-le pour utiliser le CV interactif.
+    </p>
+  </noscript>
+
+  <script src="scripts/commands.js" defer></script>
+  <script src="scripts/terminal.js" defer></script>
+</body>
+</html>

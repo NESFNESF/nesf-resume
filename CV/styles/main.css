@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #121212; /* Un fond un peu plus sombre pour le contraste */
+  color: #33ff33;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 17px;
+  line-height: 1.4;
+  overflow: hidden;
+  user-select: none; /* éviter la sélection accidentelle */
+}
+
+.terminal {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: #0d0d0d;
+  border: 2px solid #33ff33;
+  border-radius: 8px;
+  box-shadow:
+    0 0 10px #33ff33aa,
+    inset 0 0 20px #33ff3388;
+}
+
+.output {
+  flex: 1;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  padding-right: 10px; /* pour éviter que le texte touche le bord */
+  margin-bottom: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #33ff33 #121212;
+}
+
+/* Scrollbar pour Chrome, Edge et Safari */
+.output::-webkit-scrollbar {
+  width: 8px;
+}
+.output::-webkit-scrollbar-track {
+  background: #121212;
+}
+.output::-webkit-scrollbar-thumb {
+  background-color: #33ff33;
+  border-radius: 4px;
+  border: 2px solid #121212;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #33ff33;
+  padding-top: 10px;
+}
+
+.input-line span {
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #00ff00dd;
+  user-select: none;
+}
+
+input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #33ff33;
+  font: inherit;
+  outline: none;
+  caret-color: #00ff00;
+  padding: 6px 8px;
+  border-radius: 4px;
+  box-shadow:
+    0 0 5px #00ff00aa;
+  transition: box-shadow 0.3s ease;
+}
+
+input:focus {
+  box-shadow:
+    0 0 10px #00ff00ee,
+    0 0 20px #33ff33cc;
+}
