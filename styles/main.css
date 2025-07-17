@@ -1,13 +1,13 @@
 body {
   margin: 0;
   padding: 0;
-  background: #121212; /* Un fond un peu plus sombre pour le contraste */
+  background: #121212;
   color: #33ff33;
   font-family: 'Courier New', Courier, monospace;
   font-size: 17px;
   line-height: 1.4;
   overflow: hidden;
-  user-select: none; /* éviter la sélection accidentelle */
+  user-select: none;
 }
 
 .terminal {
@@ -23,13 +23,14 @@ body {
   box-shadow:
     0 0 10px #33ff33aa,
     inset 0 0 20px #33ff3388;
+  overflow: hidden;
 }
 
 .output {
   flex: 1;
   overflow-y: auto;
   white-space: pre-wrap;
-  padding-right: 10px; /* pour éviter que le texte touche le bord */
+  padding-right: 10px;
   margin-bottom: 10px;
   scrollbar-width: thin;
   scrollbar-color: #33ff33 #121212;
@@ -53,6 +54,7 @@ body {
   align-items: center;
   border-top: 1px solid #33ff33;
   padding-top: 10px;
+  flex-wrap: wrap;
 }
 
 .input-line span {
@@ -65,6 +67,7 @@ body {
 
 input {
   flex: 1;
+  min-width: 150px;
   background: transparent;
   border: none;
   color: #33ff33;
@@ -73,8 +76,7 @@ input {
   caret-color: #00ff00;
   padding: 6px 8px;
   border-radius: 4px;
-  box-shadow:
-    0 0 5px #00ff00aa;
+  box-shadow: 0 0 5px #00ff00aa;
   transition: box-shadow 0.3s ease;
 }
 
@@ -82,4 +84,50 @@ input:focus {
   box-shadow:
     0 0 10px #00ff00ee,
     0 0 20px #33ff33cc;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  .terminal {
+    padding: 15px;
+    border-width: 1px;
+  }
+
+  .input-line span {
+    font-size: 16px;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  .input-line {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .terminal {
+    padding: 10px;
+  }
+
+  .input-line span {
+    font-size: 14px;
+  }
+
+  input {
+    font-size: 14px;
+  }
 }
